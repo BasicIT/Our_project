@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Youtube Video Downloader</title>
+	<link rel="stylesheet" href="{% static '/video_downloader/css/styles.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+	
+
+
+<div class="wrapper">
+	<!-- <input type="text" class="input" placeholder="Insert video name">
+	<div class="searchbtn"><a type="submit" value="Submit" ><i class="fas fa-search"></i></a></div> -->
+
+<form name="search" action="{% url 'search' %}" method="get">
+<input type="text" class="input" placeholder="Type Video Name" name="searchbox">
+<input type="submit" value="Submit">
+</form>
+</div>
+
+</body>
+</html>
