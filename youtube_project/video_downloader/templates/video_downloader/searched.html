@@ -1,0 +1,37 @@
+{% load static %}
+
+	{% block content %}
+
+
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Youtube Video Downloader</title>
+	<link rel="stylesheet" href="{% static '/video_downloader/css/styles.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+	
+ <!-- <form method="GET">
+ 	{% csrf_token %}
+ 	{{video}}
+</form> -->
+<center>
+<p>
+	{% for item in results %}
+	<div>
+	<li>{{item.title}}</li>
+	<img src={{item.thumbnails.0}}>
+	</div>
+	{% endfor %}
+</p>
+</center>
+	<!-- {% for item in thumbnail %}
+	<img src={{item}}>
+	{% endfor %} -->
+{% endblock content %}	
+
+
+</body>
+</html>
