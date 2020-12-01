@@ -22,7 +22,9 @@
 	{% for item in results %}
 	<div>
 	<li>{{item.title}}</li>
+	<a href="{% url 'download_page'%}">
 	<img src={{item.thumbnails.0}}>
+	</a>
 	</div>
 	{% endfor %}
 </p>

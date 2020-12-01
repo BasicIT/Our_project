@@ -20,8 +20,9 @@ def search(request):
 	input_ = path_info.rsplit('=', 1)[1]
 	result=YoutubeSearch(input_,max_results=20).to_json()
 	data = json.loads(result)
+
 	
-	x = len(data["videos"])
+	# x = len(data["videos"])
 	# l = []
 	# for i in range(15):
 		
@@ -47,4 +48,10 @@ def search(request):
 	# youtube = build('youtube', 'v3', developerKey=api_key)
 	# req = youtube.search().list(q=input_, part='snippet', type='video', maxResults=20)
 	return render(request, 'video_downloader/searched.html', content)
-	# return HttpResponse(l)
+	# return HttpResponse(input_)
+
+def download_page(request):
+	return HttpResponse('a')
+
+
+
